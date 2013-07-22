@@ -1,6 +1,6 @@
 TiCustomBGService
 ======================
-Titanium module for iOS.
+Titanium module for iOS.  
 Custom iOS Background Service.  
  
 Why
