@@ -1,18 +1,27 @@
-TiCustomBGService
-======================
-Titanium module for iOS.  
+TiCustomBGService(){
+==================================================
+This is a Titanium module for iOS.  
 Custom iOS Background Service.  
- 
-Why
-------
+
+<a name="TOC">Table of Contents</a>
+--------------------------------------------------
+1. [Why](#Why)
+1. [Usage](#Usage)
+1. [License](#License)
+
+<a name="Why">Why</a>
+-------------------------------------------------- 
 通常RegisterBackgroundServiceを複数回呼び出すと、どうやら古いサービスがキープされているようで、それが実行されるようだ。  
 一度でもRegistしてしまうと、そのサービスをunRegistしても結果は同じだった。  
 したがって古いサービスを呼ばないように、必ず新しいサービスがRegistされるようにしたモジュールを作った。  
 TiAppおよびTiAppiOSProxyをCategoryによって拡張している。  
 したがってモジュールを読込めば動的に既存クラスへ機能が追加される。  
 
-HOWTO
-------
+**[[⬆]](#TOC)**
+
+<a name="Usage">Usage</a>
+--------------------------------------------------
+```javascript
     var CustomBGService = require('net.uchidak.ticustombgservice');
     var service;
     service = Titanium.App.iOS.customRegisterBackgroundService({
@@ -20,9 +29,13 @@ HOWTO
                 title : paramVideoTitle,
                 video : videoPlayer
             });
- 
-LICENSE
-----------
+```
+
+**[[⬆]](#TOC)**
+
+<a name="License">License and Credits</a>
+--------------------------------------------------
+**TiCustomBGService**  
 The MIT License (MIT)
 
 Copyright (c) 2013 Keisuke Uchida
@@ -44,3 +57,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+**[[⬆]](#TOC)**
+
+};
+==================================================
+© 2013 [Keisuke Uchida](http://uchidak.net) All rights reserved.
